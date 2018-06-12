@@ -1,0 +1,84 @@
+after installating aws cls please check the version with follng command
+
+ aws --version
+
+global resources 
+
+ to list s3 buckets
+
+aws s3 ls
+
+
+to describe list region list
+
+aws ec2 describe-regions
+ 
+ 
+aws ec2 describe-instances --region ap-south-1
+
+
+
+
+
+to set the aws user keys(credtncials)
+
+aws configure
+
+acess key:
+secret key:
+region : ap-south-1
+format: text
+
+
+
+to describe ec2 list
+
+
+aws ec2 describe-instances
+
+ 
+to describe particular instance
+
+ aws ec2 describe-instances --instance-ids id_of_instance
+
+ aws ec2 describe-instances --instance-ids i-0f9359d80972c502d
+
+ to filter 
+
+aws ec2 describe-instances --filters "Name=instance-type,Values=t2.micro"
+
+
+
+to view with tag name
+
+ aws ec2 describe-instances  --filters "Name=tag-value, Values=web"
+
+
+ aws ec2 describe-instances  --filters "Name=tag-value, Values=we*"
+
+
+to view particular avaliability zone instances
+
+ aws ec2 describe-instances --filters "Name=availability-zone ,Values=ap-south-1a"
+
+
+to view running instaces 
+
+
+aws ec2 describe-instances --filters "Name=instance-state-name, Values=running"
+
+(instance-state-code == running 16 , stopped 80 , pending 0,  terminated 48)ca
+
+to view stopped instance list 
+
+aws ec2 describe-instanes --filters "Name=instace-state-name, values=stopped"
+
+
+
+
+
+
+
+
+
+
