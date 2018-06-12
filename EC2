@@ -77,6 +77,18 @@ aws ec2 describe-instanes --filters "Name=instace-state-name, values=stopped"
 
 
 
+to start instances form CLI
+
+aws ec2 start-instances --instance-ids id_of_instance
+
+aws ec2 start-instances --instance-ids i-04643bb240675ec17
+
+
+
+
+
+
+
 
 
 
