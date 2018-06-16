@@ -1,0 +1,6 @@
+ aws ec2 describe-instances --filters "Name=instance-state-name, Values=running" |  grep InstanceId >>instance1
+  cut -c 30-50 instance1 >> running
+  rm -rf instance1
+  echo the running instance is
+  cat running
+rm -rf running
